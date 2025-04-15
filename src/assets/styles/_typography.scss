@@ -1,0 +1,175 @@
+@use "sass:list";
+
+$font-sizes-desktop: (
+  "heading-extra": (
+    72px,
+    90px,
+    900,
+    "Alegreya",
+  ),
+  "heading-large": (
+    52px,
+    65px,
+    900,
+    "Alegreya",
+  ),
+  "heading-medium": (
+    32px,
+    40px,
+    800,
+    "Alegreya",
+  ),
+  "heading-small": (
+    24px,
+    30px,
+    800,
+    "Alegreya",
+  ),
+  "body-large": (
+    24px,
+    36px,
+    400,
+    "Roboto",
+  ),
+  "body-medium": (
+    14px,
+    21px,
+    400,
+    "Roboto",
+  ),
+  "body-small": (
+    12px,
+    18px,
+    400,
+    "Roboto",
+  ),
+);
+
+$font-sizes-tablet: (
+  "heading-extra": (
+    52px,
+    65px,
+    900,
+    "Alegreya",
+  ),
+  "heading-large": (
+    40px,
+    60px,
+    900,
+    "Alegreya",
+  ),
+  "heading-medium": (
+    24px,
+    30px,
+    800,
+    "Alegreya",
+  ),
+  "heading-small": (
+    20px,
+    27px,
+    800,
+    "Alegreya",
+  ),
+  "body-large": (
+    18px,
+    27px,
+    400,
+    "Roboto",
+  ),
+  "body-medium": (
+    14px,
+    21px,
+    400,
+    "Roboto",
+  ),
+  "body-small": (
+    12px,
+    18px,
+    400,
+    "Roboto",
+  ),
+);
+
+$font-sizes-mobile: (
+  "heading-extra": (
+    40px,
+    50px,
+    900,
+    "Alegreya",
+  ),
+  "heading-large": (
+    28px,
+    35px,
+    900,
+    "Alegreya",
+  ),
+  "heading-medium": (
+    20px,
+    25px,
+    800,
+    "Alegreya",
+  ),
+  "heading-small": (
+    18px,
+    24px,
+    800,
+    "Alegreya",
+  ),
+
+  "body-large": (
+    16px,
+    24px,
+    400,
+    "Roboto",
+  ),
+  "body-medium": (
+    12px,
+    18px,
+    400,
+    "Roboto",
+  ),
+  "body-small": (
+    11px,
+    17px,
+    400,
+    "Roboto",
+  ),
+);
+
+@mixin generate-fonts($map) {
+  @each $name, $values in $map {
+    $font-size: list.nth($values, 1);
+    $line-height: list.nth($values, 2);
+    $font-weight: list.nth($values, 3);
+    $font-family: list.nth($values, 4);
+
+    &--#{$name} {
+      font-size: $font-size;
+      line-height: $line-height;
+      font-weight: $font-weight;
+      font-family: $font-family;
+    }
+  }
+}
+
+.typography {
+  &--normal {
+    font-style: normal;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 0px) {
+    @include generate-fonts($font-sizes-mobile);
+  }
+
+  @media screen and (width > 320px) {
+    @include generate-fonts($font-sizes-tablet);
+  }
+
+  @media screen and (width > 834px) {
+    @include generate-fonts($font-sizes-desktop);
+  }
+}
