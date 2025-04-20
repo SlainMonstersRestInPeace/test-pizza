@@ -1,0 +1,126 @@
+@use "../util/adaptive" as *;
+@use "../util/animations" as *;
+
+@mixin filter-items-states {
+  &:hover {
+    // TODO
+    color: #e52d2d;
+  }
+
+  &:hover .pizza-menu__filter-icon {
+    opacity: 1;
+    transform: translate(0, -30px);
+  }
+}
+
+.pizza-menu {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 0px 16px 60px;
+
+    @media #{$screen-tablet} {
+      gap: 40px;
+      padding: 0px 32px 80px;
+    }
+
+    @media #{$screen-desktop} {
+      gap: 40px;
+      padding: 0px 16px 100px;
+    }
+  }
+
+  &__container {
+    @media #{$screen-mobile} {
+      width: 100%;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 232px;
+
+    @media #{$screen-tablet} {
+      gap: 20px;
+      max-width: 520px;
+    }
+
+    @media #{$screen-desktop} {
+      gap: 55px;
+      max-width: 560px;
+    }
+  }
+
+  &__filter-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__filter-item {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // TODO
+    transition: $transition-all;
+    position: relative;
+
+    @media #{$screen-tablet} {
+      // TODO
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 900;
+      font-family: "Alegreya";
+
+      @include filter-items-states;
+    }
+
+    @media #{$screen-desktop} {
+      // TODO
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 900;
+      font-family: "Alegreya";
+
+      @include filter-items-states;
+    }
+  }
+
+  &__filter-icon {
+    position: absolute;
+    opacity: 0;
+    // TODO
+    transition: $transition-all;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media #{$screen-tablet} {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media #{$screen-desktop} {
+      display: grid;
+      gap: 32px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}
