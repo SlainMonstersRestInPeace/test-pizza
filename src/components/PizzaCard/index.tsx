@@ -4,12 +4,9 @@ import Typography from "@/primitives/Typography";
 import { MEDIA_SCREEN_MOBILE } from "@/theme/adaptive";
 import { useEffect, useRef, useState } from "react";
 import cn from "clsx";
-import CarrotIcon from "@/assets/icons/carrot.svg";
-import CheeseIcon from "@/assets/icons/cheese.svg";
-import PepperIcon from "@/assets/icons/pepper.svg";
-import MeatIcon from "@/assets/icons/meat.svg";
-import { InternalSVG, PizzaSize, PizzaType } from "@/types";
+import { PizzaSize, PizzaType } from "@/types";
 import SegmentedControl from "@/primitives/SegmentedControl";
+import PizzaCardTypeIcons from "../PizzaTypeIcons";
 
 interface IProps {
   imageUrl: string;
@@ -35,7 +32,11 @@ export default function PizzaCard({
   const Info = <PizzaCardInfo title={title} description={description} />;
   return (
     <div className="pizza-card">
-      <PizzaCardTypeIcons types={types} />
+      <PizzaCardTypeIcons
+        types={types}
+        className="pizza-card__type_icons"
+        iconClassName="pizza-card__type-icon"
+      />
       <div className="pizza-card__main">
         <PizzaImage src={imageUrl} size={size} />
         {!isMobile && Info}
@@ -55,24 +56,6 @@ export default function PizzaCard({
           variant={isMobile ? "compact" : "full"}
         />
       </div>
-    </div>
-  );
-}
-
-const pizzaTypesIconMap: Record<PizzaType, InternalSVG> = {
-  spice: PepperIcon,
-  cheese: CheeseIcon,
-  meat: MeatIcon,
-  vegan: CarrotIcon,
-};
-
-function PizzaCardTypeIcons({ types }: { types: PizzaType[] }) {
-  return (
-    <div className="pizza-card__type_icons">
-      {types.map((type) => {
-        const Icon = pizzaTypesIconMap[type];
-        return <Icon fill="#c5cbd1" className="pizza-card__type-icon" />;
-      })}
     </div>
   );
 }

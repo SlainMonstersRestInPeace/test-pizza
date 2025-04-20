@@ -1,0 +1,181 @@
+@mixin field-label {
+  font-family: "Alegreya";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+}
+
+.order-form {
+  padding: 32px 32px 40px;
+
+  &__field-label {
+    font-family: "Alegreya";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+
+  &__title {
+    font-family: "Alegreya";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    top: 21px;
+    right: 20px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__separator {
+    width: 100%;
+    // TODO
+    border-bottom: 1px solid #dcdfe2;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 0;
+    padding-right: 32px;
+  }
+
+  &__item-detail {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__remove-item {
+    position: absolute;
+    top: 8px;
+    right: 0;
+  }
+
+  &__image-container {
+    padding: 10px;
+    position: relative;
+  }
+
+  &__pizza-types {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  &__pizza-type-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__item-image {
+    aspect-ratio: 1/1;
+    max-width: 100px;
+  }
+
+  &__right-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-price {
+    font-family: "Alegreya";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: right;
+    width: 95px;
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-title {
+    margin-bottom: 4px;
+    width: 196px;
+  }
+
+  &__item-size {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+  }
+
+  &__total-layout {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    margin-bottom: 15px;
+  }
+
+  &__total {
+    margin-right: 20px;
+  }
+
+  &__total-sum {
+    font-family: "Alegreya";
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0px;
+  }
+
+  &__legal {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    // TODO
+    color: #848a9a;
+  }
+
+  &__payment {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__contact-title {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  &__contact-first-row {
+    display: flex;
+    // TODO
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+
+  &__payment-method {
+    margin-bottom: 32px;
+  }
+
+  &__submit {
+    margin-bottom: 23px;
+    width: 240px;
+  }
+}

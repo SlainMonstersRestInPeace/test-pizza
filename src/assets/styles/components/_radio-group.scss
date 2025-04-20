@@ -1,0 +1,20 @@
+.radio-group {
+  &__label {
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__label {
+    font-family: "Alegreya";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0px;
+  }
+}

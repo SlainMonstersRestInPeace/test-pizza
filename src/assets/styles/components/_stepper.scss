@@ -1,0 +1,38 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__input {
+    height: 40px;
+    max-width: 60px;
+    text-align: center;
+    border-radius: 4px;
+    // TODO
+    border: 1px solid #c4c7ca;
+
+    // TODO
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  &__inc svg,
+  &__dec svg {
+    fill: #c5cbd5;
+  }
+
+  &__inc:disabled,
+  &__dec:disabled {
+    opacity: 0.6;
+  }
+
+  &__inc:active:not(:disabled) svg,
+  &__dec:active:not(:disabled) svg {
+    // TODO
+    fill: #e52d2d;
+  }
+}

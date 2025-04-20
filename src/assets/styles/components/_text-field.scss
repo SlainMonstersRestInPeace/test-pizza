@@ -1,0 +1,101 @@
+@use "../util/animations" as *;
+
+@mixin placeholder-above {
+  font-size: 13px;
+  line-height: 18px;
+  transform: translate(-2px, -22px);
+  background: white;
+  padding: 0 2px;
+}
+
+.text-field {
+  flex: 1;
+  width: 100%;
+  position: relative;
+
+  &__placeholder {
+    position: absolute;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #a6a6a6;
+    // TODO
+    transition: $transition-all;
+    pointer-events: none;
+    z-index: 1;
+
+    top: 13px;
+    left: 12px;
+  }
+
+  &__placeholder.text-field__error {
+    // TODO
+    color: #fb7a7a !important;
+  }
+
+  &__input {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: "Roboto";
+
+    flex: 1;
+    width: 100%;
+
+    padding: 13px 12px;
+
+    // TODO
+    border: 1px solid #c4c7ca;
+    border-radius: 4px;
+    outline: none;
+
+    &:hover:not(:focus) {
+      // TODO
+      border: 1px solid black;
+    }
+
+    &:disabled {
+      border: 1px solid #eef0f3;
+      color: #747474;
+    }
+
+    &:focus:placeholder-shown {
+      outline: 2px solid #8fc9ff;
+    }
+
+    &:focus:not(:placeholder-shown) {
+      border: 1px solid #3f8fe5;
+    }
+
+    &:not(:focus):not(:placeholder-shown) ~ .text-field__placeholder {
+      @include placeholder-above;
+    }
+
+    &:focus:placeholder-shown ~ .text-field__placeholder {
+      display: none;
+    }
+
+    &:focus ~ .text-field__placeholder {
+      @include placeholder-above;
+
+      color: #3f8fe5;
+    }
+  }
+
+  &__input.text-field__error {
+    // TODO
+    border: 1px solid #fb7a7a !important;
+    outline: none !important;
+  }
+
+  &__error-label {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #fb7a7a;
+  }
+}
