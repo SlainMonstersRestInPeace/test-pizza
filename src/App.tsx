@@ -1,13 +1,7 @@
-import Main from "@/views/main";
-
-import "@/assets/styles/index.scss";
+import Main from "@/views/Main";
 
 function App() {
-  return (
-    <main className="main-content">
-      <Main />
-    </main>
-  );
+  return <Main />;
 }
 
 export default App;
