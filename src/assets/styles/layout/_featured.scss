@@ -1,0 +1,68 @@
+@use "../util/adaptive" as *;
+@use "../util/animations" as *;
+
+.featured {
+  &__content {
+    display: flex;
+    gap: 8px;
+    padding: 60px 16px;
+
+    @media #{$screen-tablet} {
+      gap: 32px;
+      padding: 50px 32px 80px;
+    }
+    @media #{$screen-desktop} {
+      gap: 32px;
+      padding: 70px 0 112px;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__slider-items {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__slider-items-wrapper {
+    // TODO
+    transition: $transition-all;
+
+    display: flex;
+    gap: 16px;
+  }
+
+  &__slider-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__slider-controls {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__slider-control {
+    display: flex;
+    gap: 8px;
+    width: 12px;
+    height: 12px;
+    // TODO
+    background: #dfe3eb;
+    border-radius: 100%;
+
+    // TODO
+    transition: $transition-all;
+
+    &--active {
+      // TODO
+      background: #e52d2d;
+    }
+  }
+}
