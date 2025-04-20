@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useHeaderVisible() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [headerEl, setHeaderEl] = useState<HTMLElement | null | undefined>();
 
   useEffect(() => {
