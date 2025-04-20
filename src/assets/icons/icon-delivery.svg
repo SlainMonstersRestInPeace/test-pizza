@@ -1,0 +1,30 @@
+<svg width="71" height="70" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-delivery">
+<g id="Group 45">
+<path id="Rectangle Copy 37" d="M44 19H37C35.8954 19 35 19.8954 35 21V21C35 22.1046 35.8954 23 37 23H44V19Z" stroke="black" stroke-width="2"/>
+<g id="Group 29 Copy 3">
+<path id="Path" d="M28.5445 57.1655C28.84 58.0567 29 59.0097 29 60.0001C29 64.9707 24.9706 69.0001 20 69.0001C15.0294 69.0001 11 64.9707 11 60.0001C11 58.9447 11.1817 57.9317 11.5154 56.9907" stroke="black" stroke-width="2"/>
+<path id="Path_2" d="M22.8771 57.2213C23.5723 57.9409 24 58.9206 24 60.0002C24 62.2094 22.2091 64.0002 20 64.0002C17.7909 64.0002 16 62.2094 16 60.0002C16 58.8674 16.471 57.8445 17.2278 57.1167" stroke="black" stroke-width="2"/>
+</g>
+<g id="Group 29 Copy 2">
+<path id="Path_3" d="M67 60C67 64.9706 62.9706 69 58 69C53.0294 69 49 64.9706 49 60" stroke="black" stroke-width="2"/>
+<path id="Path_4" d="M62 60C62 62.2091 60.2091 64 58 64C55.7909 64 54 62.2091 54 60" stroke="black" stroke-width="2"/>
+</g>
+<path id="Path Copy 3" fill-rule="evenodd" clip-rule="evenodd" d="M46 60C46 53.3726 51.3726 48 58 48C64.6274 48 70 53.3726 70 60H46Z" stroke="black" stroke-width="1.84615" stroke-linejoin="round"/>
+<rect id="Rectangle Copy 36" width="17" height="5" rx="2.5" transform="matrix(-1 0 0 1 37 33)" stroke="black" stroke-width="2"/>
+<path id="Path Copy 2" fill-rule="evenodd" clip-rule="evenodd" d="M50 27C46.6863 27 44 24.3137 44 21C44 17.6863 46.6863 15 50 15V27Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Path Copy" d="M50 17C52.2091 17 54 18.7909 54 21C54 23.2091 52.2091 25 50 25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Path 4 Copy" d="M60.5 48C60.5 48 62.5 34 53 24.5" stroke="black" stroke-width="2"/>
+<path id="Path 5 Copy" d="M48.5 26.5C48.5 26.5 58.5 44 45 47C36 48 35 38 35 38" stroke="black" stroke-width="2"/>
+<path id="Path 6 Copy" d="M46 57H8.5C8.5 57 11 43.5 21 37.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Shape Copy" d="M10 52C9.44772 52 9 51.5523 9 51C9 50.4477 9.44772 50 10 50V52ZM15.5 50C16.0523 50 16.5 50.4477 16.5 51C16.5 51.5523 16.0523 52 15.5 52V50ZM30 52C29.4477 52 29 51.5523 29 51C29 50.4477 29.4477 50 30 50V52ZM41.5 50C42.0523 50 42.5 50.4477 42.5 51C42.5 51.5523 42.0523 52 41.5 52V50ZM10 50H15.5V52H10V50ZM30 50H41.5V52H30V50Z" fill="black"/>
+<rect id="Rectangle Copy 35" width="16" height="16" transform="matrix(-1 0 0 1 17 17)" stroke="black" stroke-width="2"/>
+<rect id="Rectangle Copy 34" width="4" height="6" transform="matrix(-1 0 0 1 11 17)" stroke="#E52D2D" stroke-width="2"/>
+<rect id="Rectangle Copy 32" width="4" height="6" transform="matrix(-1 0 0 1 16 1)" stroke="#E52D2D" stroke-width="2"/>
+<rect id="Rectangle Copy 33" width="16" height="16" transform="matrix(-1 0 0 1 22 1)" stroke="black" stroke-width="2"/>
+<path id="Path 7 Copy" d="M12.5 45L4 35.5V33" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Rectangle Copy 31" fill-rule="evenodd" clip-rule="evenodd" d="M21 28H17V33H22L21 28Z" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<path id="Path 8 Copy" d="M58 69H4" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

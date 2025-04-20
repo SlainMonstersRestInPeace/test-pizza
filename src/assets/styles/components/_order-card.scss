@@ -1,0 +1,73 @@
+@use "../util/adaptive" as *;
+
+.order-card {
+  display: flex;
+  flex: 1;
+  flex-basis: 0;
+  border-radius: 5px;
+  background-color: white;
+
+  //TODO
+  box-shadow: 0px 2px 5px 0px rgba(199, 193, 168, 0.3);
+
+  padding: 12px 16px 20px 14px;
+  flex-direction: row;
+
+  @media #{$screen-tablet} {
+    gap: 14px;
+    padding: 14px 20px 40px;
+    flex-direction: column;
+  }
+  @media #{$screen-desktop} {
+    gap: 24px;
+    padding: 32px 24px;
+    flex-direction: row;
+  }
+
+  &__description {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0px;
+  }
+
+  &__icon {
+    @media #{$screen-mobile} {
+      padding: 3px;
+      margin-right: 14px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+    }
+    @media #{$screen-tablet} {
+      margin-left: 4px;
+      margin-top: 10px;
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    @media #{$screen-desktop} {
+      padding: 4px;
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+      min-height: 80px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @media #{$screen-tablet} {
+      gap: 4px;
+    }
+    @media #{$screen-desktop} {
+      gap: 6px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-pay">
+<g id="Group 57">
+<circle id="Oval" cx="10" cy="38" r="2" fill="black"/>
+<circle id="Oval Copy 6" cx="19" cy="38" r="2" fill="black"/>
+<circle id="Oval Copy 7" cx="28" cy="38" r="2" fill="black"/>
+<circle id="Oval Copy 10" cx="10" cy="46" r="2" fill="black"/>
+<circle id="Oval Copy 9" cx="19" cy="46" r="2" fill="black"/>
+<circle id="Oval Copy 8" cx="28" cy="46" r="2" fill="black"/>
+<circle id="Oval Copy 13" cx="10" cy="54" r="2" fill="black"/>
+<circle id="Oval Copy 12" cx="19" cy="54" r="2" fill="black"/>
+<circle id="Oval Copy 11" cx="28" cy="54" r="2" fill="black"/>
+<path id="Path" d="M27 9H33C35.2091 9 37 10.7909 37 13V60C37 62.2091 35.2091 64 33 64H5C2.79086 64 1 62.2091 1 60V13C1 10.7909 2.79086 9 5 9H11V9" stroke="black" stroke-width="2"/>
+<path id="Rectangle Copy 40" d="M37 14H39C40.1046 14 41 14.8954 41 16V44C41 45.1046 40.1046 46 39 46H37V14Z" stroke="black" stroke-width="2"/>
+<path id="Rectangle Copy 41" d="M41 17H60C61.6569 17 63 18.3431 63 20V40C63 41.6569 61.6569 43 60 43H41V17Z" stroke="black" stroke-width="2"/>
+<rect id="Rectangle Copy 42" x="41" y="22" width="22" height="6" stroke="black" stroke-width="2"/>
+<rect id="Rectangle Copy 39" x="11" y="1" width="16" height="12" stroke="#E52D2D" stroke-width="2" stroke-linejoin="round"/>
+<path id="Path_2" d="M30 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Rectangle Copy 38" x="6" y="18" width="26" height="11" rx="1" stroke="black" stroke-width="2"/>
+</g>
+</g>
+</svg>

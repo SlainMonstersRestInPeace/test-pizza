@@ -1,0 +1,40 @@
+@use "../util/adaptive" as *;
+
+.order {
+  // TODO
+  background-color: #f8f6f3;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+    padding: 24px 16px 40px;
+
+    @media #{$screen-tablet} {
+      gap: 20px;
+      padding: 40px 32px 60px;
+    }
+    @media #{$screen-desktop} {
+      gap: 26px;
+      padding: 72px 0px 80px;
+    }
+  }
+
+  &__cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+
+    @media #{$screen-tablet} {
+      gap: 32px;
+      flex-direction: row;
+    }
+    @media #{$screen-desktop} {
+      gap: 32px;
+      flex-direction: row;
+    }
+  }
+}
