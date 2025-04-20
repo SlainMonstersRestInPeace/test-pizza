@@ -1,0 +1,261 @@
+@use "../util/adaptive" as *;
+
+.header {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    gap: 16px;
+
+    @media #{$screen-tablet} {
+      padding: 32px 31px;
+    }
+
+    @media #{$screen-desktop} {
+      padding: 0;
+      height: 176px;
+    }
+  }
+
+  &__sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px 0px #a5a9b04d;
+  }
+
+  &__sticky &__content {
+    padding: 12px 16px;
+
+    @media #{$screen-tablet} {
+      padding: 12px 16px;
+    }
+
+    @media #{$screen-desktop} {
+      height: 60px;
+    }
+  }
+
+  &__sticky &__logo {
+    width: 85px;
+    height: 39px;
+
+    @media #{$screen-tablet} {
+      width: 85px;
+      height: 39px;
+    }
+
+    @media #{$screen-desktop} {
+      width: 68px;
+      height: 31px;
+    }
+  }
+
+  &__sticky &__menu-item {
+    font-family: "Alegreya";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.89px;
+    text-transform: uppercase;
+  }
+
+  &__sticky &__right-buttons {
+    @media #{$screen-desktop} {
+      display: none;
+    }
+  }
+
+  &__sticky &__locale-switcher {
+    display: none;
+  }
+
+  &__sticky &__nav {
+    display: none;
+
+    @media #{$screen-desktop} {
+      display: flex;
+      max-width: 318px;
+    }
+  }
+
+  &__sticky &__right {
+    justify-content: space-between;
+    max-width: calc(40px + 16px + 40px + 20px + 40px);
+
+    @media #{$screen-desktop} {
+      justify-content: center;
+      max-width: calc(195px + 204px + 60px);
+    }
+  }
+
+  &__sticky &__menu-items {
+    gap: 16px;
+
+    @media #{$screen-desktop} {
+      gap: 44px;
+    }
+  }
+
+  &__sticky &__telno {
+    // TODO
+    font-family: "Alegreya";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.29px;
+    text-transform: uppercase;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$screen-desktop} {
+      flex: 1;
+      max-width: calc(344px + 88px + 182px);
+    }
+  }
+
+  &__logo {
+    width: 85px;
+    height: 39px;
+
+    @media #{$screen-tablet} {
+      width: 130px;
+      height: 60px;
+    }
+
+    @media #{$screen-desktop} {
+      width: 182px;
+      height: 84px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @media #{$screen-desktop} {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex: 1;
+      max-width: 344px;
+    }
+
+    a {
+      text-decoration: none;
+      color: unset;
+    }
+
+    a:active,
+    a:target {
+      color: #e52d2d;
+    }
+  }
+
+  &__menu-item {
+    // TODO
+    font-family: "Alegreya";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__telno {
+    // TODO
+    font-family: "Alegreya";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.33px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    max-width: calc(40px + 16px + 40px + 20px + 40px);
+
+    @media #{$screen-tablet} {
+      max-width: calc(40px + 32px + 40px + 70px + 48px + 32px + 40px);
+    }
+
+    @media #{$screen-desktop} {
+      gap: 44px;
+      max-width: calc(518px + 44px + 48px);
+    }
+  }
+
+  &__right-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media #{$screen-tablet} {
+      gap: 32px;
+    }
+  }
+
+  &__menu-button {
+    @media #{$screen-desktop} {
+      display: none;
+    }
+  }
+
+  &__menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @media #{$screen-tablet} {
+      gap: 32px;
+    }
+
+    @media #{$screen-desktop} {
+      flex: 1;
+      gap: 16px;
+    }
+  }
+
+  &__locale-switcher {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    // TODO
+    background-color: #eff0f1;
+
+    & span {
+      // TODO
+      font-family: "Alegreya";
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 1px;
+      text-align: center;
+      display: block;
+    }
+
+    @media #{$screen-mobile} {
+      display: none;
+    }
+  }
+}

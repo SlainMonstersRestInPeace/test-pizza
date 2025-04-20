@@ -1,0 +1,10 @@
+.counter {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // TODO вынести цвета в тему
+  background-color: #e52d2d;
+}

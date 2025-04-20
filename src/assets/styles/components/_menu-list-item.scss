@@ -1,0 +1,62 @@
+@use "../util/adaptive" as *;
+
+.menu-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &__content {
+    display: none;
+
+    @media #{$screen-desktop} {
+      display: block;
+    }
+  }
+
+  &__icon-wrapper {
+    display: flex;
+    position: relative;
+    padding: 4px;
+
+    @media #{$screen-desktop} {
+      padding: 0px;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+
+    @media #{$screen-desktop} {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__compact &__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__compact &__title {
+    font-family: "Alegreya";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    @media #{$screen-mobile} {
+      top: -5px;
+      right: -5px;
+    }
+  }
+}
