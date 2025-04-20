@@ -1,0 +1,99 @@
+@use "../util/animations" as *;
+
+@mixin button-large {
+  --button-padding: 18px 16px;
+  --button-font-size: 18px;
+  --button-line-height: 24px;
+  --button-font-weight: 900;
+  --button-letter-spacing: 1px;
+  --button-font-family: "Alegreya";
+}
+
+@mixin button-medium {
+  --button-padding: 14px 16px;
+  --button-font-size: 18px;
+  --button-line-height: 24px;
+  --button-font-weight: 900;
+  --button-letter-spacing: 1px;
+  --button-font-family: "Alegreya";
+}
+
+@mixin button-small {
+  --button-padding: 9px 16px;
+  --button-font-size: 16px;
+  --button-line-height: 22px;
+  --button-letter-spacing: 1px;
+  --button-font-weight: 900;
+  --button-font-family: "Alegreya";
+}
+
+@mixin button-tiny {
+  --button-padding: 4px 16px;
+  --button-font-size: 16px;
+  --button-line-height: 20px;
+  --button-letter-spacing: 0px;
+  --button-font-weight: 500;
+  --button-font-family: "Roboto";
+}
+
+.button {
+  // TODO
+  color: white;
+  // TODO
+  background-color: #e52d2d;
+
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+
+  position: relative;
+
+  transition: $transition-all;
+
+  padding: var(--button-padding);
+
+  &:hover {
+    background: #ff3c3c;
+  }
+
+  &:active {
+    // TODO
+    background: #bf221e;
+  }
+
+  &:focus {
+    // TODO
+    outline: 3px solid #8fc9ff;
+  }
+
+  &:disabled {
+    // TODO
+    background: #dbdbdb;
+    // TODO
+    color: #939393;
+  }
+
+  &__label {
+    font-size: var(--button-font-size);
+    line-height: var(--button-line-height);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+    font-family: var(--button-font-family);
+  }
+
+  &--large {
+    @include button-large;
+  }
+  &--medium {
+    @include button-medium;
+  }
+  &--small {
+    @include button-small;
+  }
+  &--tiny {
+    @include button-tiny;
+  }
+}

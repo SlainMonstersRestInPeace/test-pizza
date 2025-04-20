@@ -1,0 +1,77 @@
+@use "../util/adaptive" as *;
+
+@mixin splash($height) {
+  height: $height;
+  background-image: url("/splash.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.offer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media #{$screen-tablet} {
+    @include splash(315px);
+  }
+  @media #{$screen-desktop} {
+    @include splash(630px);
+  }
+
+  &__content {
+    padding: 0 16px;
+
+    @media #{$screen-tablet} {
+      padding: 0 32px;
+    }
+    @media #{$screen-desktop} {
+      padding: 0px;
+    }
+  }
+
+  &__splash {
+    margin: 0px -16px;
+    @include splash(200px);
+
+    @media #{$screen-tablet} {
+      display: none;
+    }
+    @media #{$screen-desktop} {
+      display: none;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+
+    @media #{$screen-tablet} {
+      gap: 12px;
+      margin-bottom: 24px;
+      max-width: 369px;
+    }
+    @media #{$screen-desktop} {
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__description {
+    @media #{$screen-desktop} {
+      max-width: 441px;
+    }
+  }
+
+  &__go {
+    @media #{$screen-tablet} {
+      max-width: 304px;
+    }
+    @media #{$screen-desktop} {
+      max-width: 304px;
+    }
+  }
+}
