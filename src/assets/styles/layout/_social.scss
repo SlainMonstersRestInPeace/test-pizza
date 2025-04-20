@@ -1,0 +1,60 @@
+@use "../util/adaptive" as *;
+
+.social {
+  &__invitation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    margin-bottom: 20px;
+
+    @media #{$screen-tablet} {
+      gap: 0px;
+      margin-bottom: 20px;
+    }
+    @media #{$screen-desktop} {
+      gap: 13px;
+      margin-bottom: 46px;
+    }
+  }
+
+  &__inst-link {
+    text-decoration: none;
+    color: #848a9a;
+    @media #{$screen-mobile} {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__inst-items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media #{$screen-tablet} {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media #{$screen-desktop} {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+
+  &__inst-item {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    &:nth-child(4) ~ img {
+      @media #{$screen-mobile} {
+        display: none;
+      }
+    }
+
+    &:nth-child(6) ~ img {
+      @media #{$screen-tablet} {
+        display: none;
+      }
+    }
+  }
+}
