@@ -1,0 +1,24 @@
+@use "../util/adaptive" as *;
+
+.about {
+  &__content {
+    width: 100%;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px 60px;
+    gap: 20px;
+
+    @media #{$screen-tablet} {
+      max-width: 779px;
+      padding: 80px 32px;
+      gap: 12px;
+    }
+    @media #{$screen-desktop} {
+      max-width: calc(117px + 757px);
+      padding: 95px 0px 107px;
+      gap: 30px;
+    }
+  }
+}

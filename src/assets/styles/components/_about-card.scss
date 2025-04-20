@@ -1,0 +1,94 @@
+@use "../util/adaptive" as *;
+
+.about-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  @media #{$screen-tablet} {
+    align-items: center;
+    gap: 37px;
+  }
+  @media #{$screen-desktop} {
+    align-items: center;
+    gap: 27px;
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+
+    height: 80px;
+    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+
+    @media #{$screen-tablet} {
+      height: 243px;
+      width: 243px;
+      min-height: 243px;
+      min-width: 243px;
+    }
+    @media #{$screen-desktop} {
+      height: 304px;
+      width: 304px;
+      min-height: 304px;
+      min-width: 304px;
+    }
+  }
+
+  &.about-card__right {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @media #{$screen-tablet} {
+      gap: 12px;
+    }
+    @media #{$screen-desktop} {
+      gap: 12px;
+    }
+  }
+
+  &__image {
+    border-radius: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+
+    height: 80px;
+    width: 80px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media #{$screen-tablet} {
+      height: 251px;
+      width: 251px;
+    }
+    @media #{$screen-desktop} {
+      height: 314px;
+      width: 314px;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 18px;
+
+    @media #{$screen-tablet} {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @media #{$screen-desktop} {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
