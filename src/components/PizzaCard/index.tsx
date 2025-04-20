@@ -129,6 +129,7 @@ function PizzaImage({ src, size }: { src: string; size: PizzaSize }) {
           return (
             <img
               src={src}
+              key={s}
               className={cn(
                 "pizza-card__image",
                 pizzaStyleSizeMap[s],

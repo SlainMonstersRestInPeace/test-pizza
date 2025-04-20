@@ -26,7 +26,7 @@ export default function PizzaCardTypeIcons({
     <div className={className}>
       {types.map((type) => {
         const Icon = pizzaTypesIconMap[type];
-        return <Icon fill="#c5cbd1" className={iconClassName} />;
+        return <Icon key={type} fill="#c5cbd1" className={iconClassName} />;
       })}
     </div>
   );

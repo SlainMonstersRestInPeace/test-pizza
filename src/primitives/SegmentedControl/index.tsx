@@ -32,6 +32,7 @@ export default function SegmentedControl({
         )}
         {valueVariants.map((variant) => (
           <SegmentedControlItem
+            key={variant}
             label={variant}
             value={variant}
             checked={value === variant}

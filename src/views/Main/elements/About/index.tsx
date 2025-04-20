@@ -11,7 +11,7 @@ export default function About() {
     <div className={cn("about", "content-wrapper")}>
       <div className={cn("about__content", "content")}>
         {aboutItems.map((item, index) => (
-          <div className="about__card-wrapper">
+          <div key={index} className="about__card-wrapper">
             <AboutCard
               title={item.title}
               description={item.description}

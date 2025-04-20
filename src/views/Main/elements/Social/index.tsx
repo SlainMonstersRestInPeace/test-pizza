@@ -12,8 +12,8 @@ export default function Social() {
         </Typography>
       </div>
       <div className="social__inst-items">
-        {socialItems.map(({ imageUrl }) => (
-          <img src={imageUrl} className="social__inst-item" />
+        {socialItems.map(({ imageUrl }, index) => (
+          <img key={index} src={imageUrl} className="social__inst-item" />
         ))}
       </div>
     </div>

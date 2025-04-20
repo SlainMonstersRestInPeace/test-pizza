@@ -26,8 +26,9 @@ interface IProps {
 function FeaturedDesktop({ items }: IProps) {
   return (
     <>
-      {items.map((item) => (
+      {items.map((item, index) => (
         <FeaturedCard
+          key={index}
           imageUrl={item.imageUrl}
           title={item.title}
           description={item.subtitle}
@@ -54,10 +55,11 @@ function FeaturedMobileSlider({ items }: IProps) {
             transform: `translateX(-${(containerWidth + 16) * currentIndex}px)`,
           }}
         >
-          {items.map((item) => (
+          {items.map((item, index) => (
             <div
               className="featured__slider-item"
               style={{ minWidth: containerWidth }}
+              key={index}
             >
               <FeaturedCard
                 imageUrl={item.imageUrl}

@@ -12,8 +12,9 @@ export default function Order() {
           Доставка и оплата
         </Typography>
         <div className="order__cards-wrapper">
-          {orderCardItems.map(({ title, description, Icon }) => (
+          {orderCardItems.map(({ title, description, Icon }, index) => (
             <OrderCard
+              key={index}
               title={title}
               description={description}
               icon={<Icon className="order-card__icon" />}
