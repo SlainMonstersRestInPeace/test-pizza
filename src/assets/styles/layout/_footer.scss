@@ -1,0 +1,129 @@
+@use "../util/adaptive" as *;
+
+.footer {
+  // TODO
+  color: white;
+  // TODO
+  background-color: black;
+  min-height: 208px;
+
+  @media #{$screen-tablet} {
+    justify-content: center;
+    min-height: 100px;
+  }
+  @media #{$screen-desktop} {
+    justify-content: center;
+    min-height: 120px;
+  }
+
+  &__content {
+    display: flex;
+
+    @media #{$screen-mobile} {
+      flex-direction: column;
+      text-align: center;
+
+      gap: 10px;
+      padding: 24px 16px 0;
+    }
+    @media #{$screen-tablet} {
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 32px;
+      padding: 0 32px;
+    }
+    @media #{$screen-desktop} {
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 32px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @media #{$screen-mobile} {
+      flex-direction: column;
+      gap: 25px;
+    }
+    @media #{$screen-tablet} {
+      gap: 16px;
+      justify-content: space-between;
+
+      width: 100%;
+      max-width: 365px;
+    }
+    @media #{$screen-desktop} {
+      gap: 16px;
+      justify-content: space-between;
+
+      width: 100%;
+      max-width: 406px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+
+    @media #{$screen-mobile} {
+      text-align: center;
+      gap: 3px;
+    }
+    @media #{$screen-tablet} {
+      gap: 3px;
+    }
+    @media #{$screen-desktop} {
+      width: 194px;
+      gap: 6px;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+
+  &__telno {
+    font-family: "Alegreya";
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 900;
+
+    @media #{$screen-tablet} {
+      font-size: 24px;
+      line-height: 33px;
+      font-weight: 900;
+    }
+    @media #{$screen-desktop} {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 800;
+    }
+  }
+
+  &__logo {
+    width: 80px;
+    height: 36px;
+    min-width: 80px;
+    min-height: 36px;
+
+    @media #{$screen-tablet} {
+      width: 90px;
+      height: 41px;
+      max-width: 90px;
+      max-height: 41px;
+    }
+    @media #{$screen-desktop} {
+      width: 112px;
+      height: 52px;
+      max-width: 112px;
+      max-height: 52px;
+    }
+  }
+}
